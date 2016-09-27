@@ -3,7 +3,13 @@ public class BuddyInfo {
 
 	private String name;
 	private String address;
-	private String telephone;
+	private int telephone;
+	
+	public BuddyInfo(String name, String address, int telephone){
+		this.name = name;
+		this.address = address;
+		this.telephone = telephone;
+	}
 	
 	public String getName() {
 		return name;
@@ -21,20 +27,12 @@ public class BuddyInfo {
 		this.address = address;
 	}
 
-	public String getTelephone() {
+	public int getTelephone() {
 		return telephone;
 	}
 
-	public void setTelephone(String telephone) {
+	public void setTelephone(int telephone) {
 		this.telephone = telephone;
-	}
-
-	public static void main(String[] args) {
-		BuddyInfo bi = new BuddyInfo();
-		bi.setName("Homer");
-		System.out.println("Hello " + bi.getName());
-
-
 	}
 
 }

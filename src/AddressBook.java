@@ -14,9 +14,17 @@ public class AddressBook {
 		}
 	}
 
-	public void removeBuddy(int index) {
+	public BuddyInfo removeBuddy(int index) {
 		if (index >= 0) {
-			addressbook.remove(index);
+			return addressbook.remove(index);
 		}
+		return null;
+	}
+	
+	public static void main(String args[]){
+		BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", 1234);
+		AddressBook addressBook = new AddressBook();
+		addressBook.addBuddy(buddy);
+		addressBook.removeBuddy(0);
 	}
 }
